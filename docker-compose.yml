@@ -1,3 +1,6 @@
+thermostate:
+  image: bryanwweber/thermostate
+
 httpproxy:
   image: jupyter/configurable-http-proxy
   environment:
