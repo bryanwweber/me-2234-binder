@@ -19,4 +19,7 @@ tmpnb_orchestrate:
     CONFIGPROXY_AUTH_TOKEN: ${TOKEN}
   volumes:
     - /var/run/docker.sock:/docker.sock
-  command: python orchestrate.py --command='jupyter notebook --no-browser --port {port} --ip=0.0.0.0 --NotebookApp.base_url=/{base_path} --NotebookApp.port_retries=0 --NotebookApp.token="" --NotebookApp.disable_check_xsrf=True' --image='bryanwweber/thermostate'
+  command: >
+    python orchestrate.py
+    --command='jupyter notebook --no-browser --port {port} --ip=0.0.0.0 --NotebookApp.base_url=/{base_path} --NotebookApp.port_retries=0 --NotebookApp.token="" --NotebookApp.disable_check_xsrf=True'
+    --image='bryanwweber/thermostate' --pool_size=35
