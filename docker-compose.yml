@@ -12,7 +12,7 @@ httpproxy:
     - 8000:8000
 
 tmpnb_orchestrate:
-  image: jupyter/tmpnb
+  image: bryanwweber/tmpnb
   net: "host"
   container_name: tmpnb_orchestrate
   environment:
