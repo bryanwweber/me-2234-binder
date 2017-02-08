@@ -2,4 +2,4 @@ FROM jupyter/minimal-notebook
 
 MAINTAINER Bryan Weber <bryan.weber@uconn.edu>
 
-RUN conda install -yq -c conda-forge -c bryanwweber thermostate numpy
+RUN conda install -yq -c conda-forge -c bryanwweber thermostate numpy matplotlib
