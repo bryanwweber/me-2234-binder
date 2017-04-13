@@ -10,3 +10,13 @@ tmpnb scripts for ME 2234
 Clean up
 
 1. Run `sudo docker-compose down`
+
+Upgrades
+
+1. Wait for conda build of thermostate to finish on Travis
+2. `docker build -t bryanwweber/thermostate:latest .`
+3. May need to add `--pull` as an option in the previous step if it doesn't rebuild the conda image
+4. `docker push bryanwweber/thermostate`
+5. Login to servers
+6. `sudo docker-compose pull`
+7. `sudo docker-compose restart`
